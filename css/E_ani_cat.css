@@ -1,0 +1,34 @@
+
+body{
+    padding: 50px;
+}
+
+.box{
+    width: 400px;
+    height: 400px;
+    border: solid 3px;
+    position: relative;
+}
+.inner{
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/cat-walking.gif);
+    background-position: center;
+    background-size: cover;
+ 
+    animation-name: catwalk;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes catwalk {
+    0%   {transform: translate(0, 0); }
+    25%  {transform: translate(100%, 0);}
+    49%  {transform: translate(100%, 100%);}
+    50%  {transform: translate(100%, 100%) scaleX(-1);}
+    75%  {transform: translate(0, 100%) scaleX(-1);}
+    99%  {transform: translate(0, 0) scaleX(-1);}
+    100% {transform: translate(0, 0);}
+  }
